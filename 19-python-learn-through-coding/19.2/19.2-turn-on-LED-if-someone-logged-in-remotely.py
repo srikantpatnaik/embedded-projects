@@ -2,7 +2,8 @@
 import subprocess
 import RPi.GPIO as GPIO
 import time
-
+# Just in case, unlock any blocked pins
+GPIO.cleanup()
 LED=21
 
 # Use BCM style of pin numbering

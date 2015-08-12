@@ -34,3 +34,6 @@ def loop():
 		subprocess.Popen(osd, shell=True)
 		time.sleep(1)
 
+if __name__ == "__main__":
+	setup()
+	loop()

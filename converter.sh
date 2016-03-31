@@ -17,7 +17,29 @@ avconv -y -i /tmp/normal-size.mp4 -i /tmp/stereo-noisefree.mp3 -map 0:0 -map 1 -
 # To cut till end just don't provide the duration (-t).
 #avconv -ss 00:00:00.00 -i kazam_00000.mp4 -acodec copy -vcodec copy out.mp4
 
+# Join webm/mkv videos
+#mkvmerge -o output.webm -w 1.webm + 2.webm + 3.webm (or)
+
 # To slow down the video/audio together
 #mencoder -ovc copy -oac pcm -speed .95 fast.webm -o slow.webm
 
-# Join mkv videos
+# To crop width/height :
+# To obtain the coordinates use mplayer.
+# Create a ~/.mplayer/crop and add the following
+# 1 change_rectangle 2  10
+# 2 change_rectangle 2 -10
+# 3 change_rectangle 3 -10
+# 4 change_rectangle 3  10
+# 5 change_rectangle 0  10
+# 6 change_rectangle 0 -10
+# 7 change_rectangle 1  10
+# 8 change_rectangle 1 -10
+# To view and scale visually using mplayer with keyboard shortcuts (1 to 8).
+#mplayer -vf rectangle -input conf=crop video.webm
+
+# Grab the crop value from mplayer stdout and render the video
+# ffmpeg -threads 4 -i 5.webm -vf crop=1226:768:0:0 -vcodec vp8 -acodec copy output.webm
+
+# Scale the video. To keep the proportion use this link: http://scriptygoddess.com/resources/proportioncalc.htm
+#ffmpeg -threads 4 -i output.webm -vf scale=800:502 -vcodec vp8 -acodec copy output-scaled.webm 
+

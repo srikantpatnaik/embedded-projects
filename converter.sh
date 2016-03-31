@@ -24,6 +24,7 @@ avconv -y -i /tmp/normal-size.mp4 -i /tmp/stereo-noisefree.mp3 -map 0:0 -map 1 -
 #mencoder -ovc copy -oac pcm -speed .95 fast.webm -o slow.webm
 
 # To crop width/height :
+# http://www.incenp.org/notes/2012/video-cropping.html
 # To obtain the coordinates use mplayer.
 # Create a ~/.mplayer/crop and add the following
 # 1 change_rectangle 2  10

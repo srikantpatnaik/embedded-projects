@@ -8,3 +8,6 @@ eog image1.png and move desired desktop
 Connect zoom h1(sensitivity 45) and open audio settings 
 Kazam and select zoom h1 and frame size to start
 To show typed command on terminal use "screenkey" to show typed commands
+
+More here:
+https://docs.google.com/document/d/1JELC4CBeXNyz8peh7Xe1uFahX92oAXew230a6dF-mvw/edit

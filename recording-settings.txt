@@ -4,10 +4,21 @@ Goto desktop and visit http://10.42.0.16:8080/ and fix zoom to 1.6x
 In terminal: cvlc http://10.42.0.16:8080/video --brightness 0.96 --contra 0.9 --saturation 2 --gamma 1   (move to next desktop)
 Open Autokey and edit slide 1/2 to obtain desired output. Use cnt+alt+1/2/s (s is stop)
 Goto ~/canva-slides/ and browse to qiv directory and run : qiv -e outline.png &
+Use 'devilspie' to undecoreate 'qiv', create ~/.devilspie/border.ds and add the text given at the end:
 eog image1.png and move desired desktop
 Connect zoom h1(sensitivity 45) and open audio settings 
 Kazam and select zoom h1 and frame size to start
 To show typed command on terminal use "screenkey" to show typed commands
+
+
+~/devilspie/border.ds:
+(and (is (application_name) "qiv")
+	 (is (window_role) "")
+	 (begin
+			(undecorate)
+	 )
+)
+
 
 More here:
 https://docs.google.com/document/d/1JELC4CBeXNyz8peh7Xe1uFahX92oAXew230a6dF-mvw/edit

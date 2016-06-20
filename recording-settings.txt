@@ -19,6 +19,30 @@ To show typed command on terminal use "screenkey" to show typed commands
 	 )
 )
 
+#########################################################
+New settings as on Jun 20 2016
+#########################################################
+1) Created a canva template. The colors used should be same as terminal colour. Match
+   the colour using chrome colour picker plugin(present colour: 1E0618).
+2) Install 'devilspie', 'ardesia', 'simplescreenrecorder', 'compizconfig-settings-manager'
+3) In '.devilspie/terminal.ds' add the following :
+
+	(if (is (window_role) "borderless")
+	  (begin
+		(undecorate)
+	  )
+	)
+
+4) alias gnome-terminal='(devilspie&) && (gnome-terminal --role=borderless)' in bashrc
+5) In compiz settings -> desktop -> Desktop wall -> uncheck first two(aka Show viewpoint switcher preview & next)
+6) Keep the wallpaper as canva png file. 
+7) Add 'ardesia' to show up on all desktops. 
+8) Invoke and resize the 'gnome-terminal' from the terminal with alias already set. 
+9) Use simplescreenrecorder keyboard shortcut 'cntl+shift+r' to toggle record/stop.
+
 
 More here:
 https://docs.google.com/document/d/1JELC4CBeXNyz8peh7Xe1uFahX92oAXew230a6dF-mvw/edit
+
+
+

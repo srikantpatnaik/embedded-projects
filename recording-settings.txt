@@ -1,31 +1,11 @@
-Checklist for Arduino Recroding
-Initialize IP webcam on Android
-Goto desktop and visit http://10.42.0.16:8080/ and fix zoom to 1.6x
-In terminal: cvlc http://10.42.0.16:8080/video --brightness 0.96 --contra 0.9 --saturation 2 --gamma 1   (move to next desktop)
-Open Autokey and edit slide 1/2 to obtain desired output. Use cnt+alt+1/2/s (s is stop)
-Goto ~/canva-slides/ and browse to qiv directory and run : qiv -e outline.png &
-Use 'devilspie' to undecoreate 'qiv', create ~/.devilspie/border.ds and add the text given at the end:
-eog image1.png and move desired desktop
-Connect zoom h1(sensitivity 45) and open audio settings 
-Kazam and select zoom h1 and frame size to start
-To show typed command on terminal use "screenkey" to show typed commands
+######################################################
+Checklist for Arduino tutorials (not in correct order)
+######################################################
 
-
-~/devilspie/border.ds:
-(and (is (application_name) "qiv")
-	 (is (window_role) "")
-	 (begin
-			(undecorate)
-	 )
-)
-
-#########################################################
-New settings as on Jun 20 2016
-#########################################################
-1) Created a canva template. The colors used should be same as terminal colour. Match
-   the colour using chrome colour picker plugin(present colour: 1E0618).
-2) Install 'devilspie', 'ardesia', 'simplescreenrecorder', 'compizconfig-settings-manager'
-3) In '.devilspie/terminal.ds' add the following :
+1)  Created a canva template. The colors used should be same as terminal colour. Match
+    the colour using chrome colour picker plugin(present colour: 1E0618).
+2)  Install 'devilspie', 'ardesia', 'simplescreenrecorder', 'compizconfig-settings-manager'
+3)  In '.devilspie/terminal.ds' add the following :
 
 	(if (is (window_role) "borderless")
 	  (begin
@@ -33,16 +13,17 @@ New settings as on Jun 20 2016
 	  )
 	)
 
-4) alias gnome-terminal='(devilspie&) && (gnome-terminal --role=borderless)' in bashrc
-5) In compiz settings -> desktop -> Desktop wall -> uncheck first two(aka Show viewpoint switcher preview & next)
-6) Keep the wallpaper as canva png file. 
-7) Add 'ardesia' to show up on all desktops. 
-8) Invoke and resize the 'gnome-terminal' from the terminal with alias already set. 
-9) Use simplescreenrecorder keyboard shortcut 'cntl+shift+r' to toggle record/stop.
-
-
-More here:
-https://docs.google.com/document/d/1JELC4CBeXNyz8peh7Xe1uFahX92oAXew230a6dF-mvw/edit
-
+4)  alias gnome-terminal='(devilspie&) && (gnome-terminal --role=borderless)' in bashrc
+5)  In compiz settings -> desktop -> Desktop wall -> uncheck first two(aka Show viewpoint switcher preview & next)
+6)  Keep the wallpaper as canva png file. 
+7)  Add 'ardesia' to show up on all desktops. 
+8)  Invoke and resize the 'gnome-terminal' from the terminal with alias already set. 
+9)  Use simplescreenrecorder keyboard shortcut 'cntl+shift+r' to toggle record/stop.
+10  Initialize IP webcam on Android
+11) Goto desktop and visit http://10.42.0.16:8080/ and fix zoom to 1.6x
+12) In terminal: cvlc http://10.42.0.16:8080/video --brightness 0.96 --contra 0.9 --saturation 2 --gamma 1   (move to next desktop)
+13) Goto ~/canva-slides/ and browse to qiv directory and run : qiv -e outline.png &
+14) Use 'devilspie' to undecoreate 'qiv', create ~/.devilspie/border.ds and add the text given at the end:
+15) Connect zoom h1(sensitivity 45) and open audio settings 
 
 
